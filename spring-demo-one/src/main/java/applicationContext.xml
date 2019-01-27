@@ -9,9 +9,19 @@
 
     <!-- Define your beans here -->
     
-    <bean id="myCoach"
-    	class="com.shb.EsportsCoach">
-    </bean>
+	<bean id="myCoach"
+		class="com.shb.TrackCoach">
+		<constructor-arg ref="myFortuneService"></constructor-arg>
+	</bean>
+
+	<bean id="myFortuneService"
+		class="com.shb.HappyFortuneService">
+	</bean>
+
+	<bean id="myCricketCoach"
+		class="com.shb.CricketCoach">
+		<property name="fortuneService" ref="myFortuneService"></property>
+	</bean>
     
 </beans>
 
