@@ -6,6 +6,11 @@ import org.springframework.stereotype.Component;
 public class SpeechCoach implements Coach {
 
 	@Override
+	public String getDailyFortune() {
+		return null;
+	}
+
+	@Override
 	public String getDailyWorkout() {
 		return "Talk to yourself in front of a mirror.";
 	}
