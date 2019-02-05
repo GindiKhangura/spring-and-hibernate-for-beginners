@@ -8,6 +8,14 @@ public class TrackCoach implements Coach {
 		this.fortuneService = fortuneService;
 	}
 
+	public void doCleanupStuff() {
+		System.out.println("Do cleanup stuff.");
+	}
+
+	public void doStartupStuff() {
+		System.out.println("Do startup stuff.");
+	}
+
 	@Override
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
